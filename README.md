@@ -2,6 +2,7 @@
 
 ## 📌 Project Overview
 
+DO IT AT YOUR OWN RISK. I AM NOT RESPOSIBLE FOR ANY DATA LOSS OR SYSTEM FALIURE. RUN IT ONLY ON VIRTUAL MACHINES AND NOT REAL SYSTEM. THIS IS STRICTLY FOR EDUCATIONAL PURPOSES
 This Python script is a **non-destructive simulation of scareware or ransomware-like behavior** designed for ethical hacking demonstrations. It mimics some malicious actions such as:
 
 - Disabling Task Manager
