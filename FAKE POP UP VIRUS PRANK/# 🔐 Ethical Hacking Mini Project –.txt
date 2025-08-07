@@ -1,0 +1,61 @@
+# 🔐 Ethical Hacking Mini Project – Malware Simulation (BSOD + Popup Lock)
+
+## 📌 Project Overview
+
+This Python script is a **non-destructive simulation of scareware or ransomware-like behavior** designed for ethical hacking demonstrations. It mimics some malicious actions such as:
+
+- Disabling Task Manager
+- Killing `explorer.exe` (removes desktop/taskbar)
+- Displaying looping warning pop-ups
+- Triggering a forced **Blue Screen of Death (BSOD)**
+- Booting into **Advanced Recovery Mode**
+
+⚠️ **No files are deleted, modified, or encrypted** — the project is purely for educational and demonstrative use in **virtual machines** or **controlled environments**.
+
+---
+
+## 🎯 Objectives
+
+- Demonstrate how malware can manipulate system APIs
+- Show privilege escalation and crash techniques
+- Simulate real malware behavior without actual destruction
+- Practice safe malware analysis in VMs
+
+---
+
+## ⚙️ Features
+
+- Endless pop-up dialogs with randomized scare messages
+- Disables Task Manager using the Windows registry
+- Kills Windows Explorer to simulate a system freeze
+- BSOD triggered by:
+  - Clicking "No" once
+  - Clicking "Yes" 15 times
+- Forces restart into Windows Recovery Options
+
+---
+
+## 🚀 How to Run
+
+> 🧪 **Only run this on a Virtual Machine or test environment.**
+
+1. **Make sure you are on Windows.**
+2. **Run the script as administrator.**
+3. The system will:
+   - Disable Task Manager
+   - Kill the desktop/taskbar
+   - Begin showing pop-up boxes
+4. Click "Yes" 15 times or "No" once → triggers BSOD and restarts to Advanced Startup.
+
+---
+
+## 🛠️ Cleanup Instructions
+
+If you'd like to restore your system manually:
+
+- **Re-enable Task Manager:**
+
+  ```cmd
+  REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /f
+
+## you can convert this to an exe by using pyinstaller --noconsole --onefile reboot.py
